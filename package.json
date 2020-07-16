@@ -1,0 +1,53 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "lint": "./node_modules/.bin/eslint resources/js/components resources/js/containers resources/js/contexts resources/js/types resources/js/utilities",
+        "lint-fix": "./node_modules/.bin/eslint --fix resources/js/components resources/js/containers resources/js/contexts resources/js/types resources/js/utilities",
+        "test": "phpdbg -dmemory_limit=512M -qrr vendor/bin/phpunit",
+        "test-coverage": "phpdbg -dmemory_limit=1G -qrr vendor/bin/phpunit --coverage-clover tests/coverage/clover.xml --coverage-html tests/coverage/html"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.9.4",
+        "@fortawesome/fontawesome-free": "^5.13.0",
+        "axios": "^0.18.1",
+        "bootstrap": "^4.5.0",
+        "classnames": "^2.2.6",
+        "cross-env": "^5.2.1",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.1",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.20.0",
+        "jquery": "^3.5.1",
+        "laravel-mix": "^4.1.4",
+        "lodash": "^4.17.15",
+        "popper.js": "^1.16.1",
+        "prettier": "2.0.4",
+        "prop-types": "^15.7.2",
+        "qs": "^6.9.4",
+        "react": "^16.13.1",
+        "react-content-loader": "^4.3.4",
+        "react-datepicker": "^2.15.0",
+        "react-dom": "^16.13.1",
+        "react-select": "^3.1.0",
+        "react-toast-notifications": "^2.4.0",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.26.5",
+        "sass-loader": "^7.3.1",
+        "tailwindcss": "^0.7.4"
+    },
+    "dependencies": {
+        "@sentry/browser": "^5.15.5",
+        "moment": "^2.25.3",
+        "moment-timezone": "^0.5.28",
+        "react-hook-form": "^4.10.2",
+        "react-use": "^13.27.1"
+    }
+}
